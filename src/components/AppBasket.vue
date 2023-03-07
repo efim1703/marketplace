@@ -68,24 +68,6 @@ const deleteProduct = (productId) => {
 	store.dispatch('deleteProduct', productId)
 }
 
-
-
-
-
-
-isCntional ? filter.name1 = key1 : filter.name2 = key2
-
-
-const filter = {
-	...(isConditional ? {name1:key1} : {name2:key2})
-}
-
-
-
-
-
-
-
 </script>
 
 <style lang="scss" scoped>
