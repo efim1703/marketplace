@@ -3,22 +3,32 @@
 		<input 
 			type="number" 
 			:value="value"
-			@input="$emit('input', $event.target.value)"
+			@input="changeValue($event.target.value)"
 		>
 	</div>
 </template>
 
 <script setup>
-import { computed } from "vue";
 
 const props = defineProps({
 	value: { 
-		type: String, 
-		default: ''
+		type: Number, 
+		default: 0
+	},
+	maxValue: { 
+		type: [Number, null], 
+		default: null
 	},
 });
 
 const emits = defineEmits(['input'])
+
+const changeValue = (val) => {
+	let validValue = val
+	if (props.maxValue && validValue > props.maxValue) validValue = props.maxValue;
+	
+	emits('input', validValue)
+}
 
 </script>
 

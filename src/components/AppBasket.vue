@@ -10,7 +10,12 @@
 					{{ product.title }}
 				</div>
 				<div class="count">
-					<InputNumber :value="product.count" @input="$event => changeProductCount($event, product.T)"/>
+					<div v-if="product.P < 10" class="limit">Количество ограничено!</div>
+					<InputNumber 
+						:value="product.count" 
+						:maxValue="product.P"
+						@input="$event => changeProductCount($event, product.T)"
+					/>
 					<span>шт.</span>
 				</div>
 				<div class="price">
@@ -67,25 +72,6 @@ const changeProductCount = (count, productId) => {
 const deleteProduct = (productId) => {
 	store.dispatch('deleteProduct', productId)
 }
-
-
-
-
-
-
-isCntional ? filter.name1 = key1 : filter.name2 = key2
-
-
-const filter = {
-	...(isConditional ? {name1:key1} : {name2:key2})
-}
-
-
-
-
-
-
-
 </script>
 
 <style lang="scss" scoped>
@@ -109,6 +95,11 @@ const filter = {
 			display: flex;
 			align-items: center;
 			gap: 8px;
+
+			.limit {
+				color: $red;
+				max-width: 80px;
+			}
 		}
 
 		.price {

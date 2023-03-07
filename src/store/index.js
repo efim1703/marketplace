@@ -36,8 +36,6 @@ export default createStore({
     setProductCount({commit, state}, params) {
       const newBasket = [...state.basket]
       newBasket.forEach(el => el.id === params.productId ? el.count = params.count : false)
-      console.log(newBasket);
-      console.log(params.productId);
       commit('setBasket', newBasket)
     },
     deleteProduct({commit, state}, productId) {
