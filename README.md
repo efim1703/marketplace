@@ -1,19 +1,5 @@
 # goods
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Функциональное подобие маркетплейса со списком товаров и корзины, с отслеживанием изменений в цене и соответствующим сигналом об этом, с завязкой на курсе доллара. 
+### Vue3/Vuex/Vue-router/Yarn
+<img width="1440" alt="Снимок экрана 2023-03-03 в 15 08 33" src="https://user-images.githubusercontent.com/107515334/222716598-e1aebb81-c28c-4396-aee2-df35ef5f9271.png">
