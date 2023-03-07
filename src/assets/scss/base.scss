@@ -1,0 +1,37 @@
+@import './variables.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// todo: скролл скрыть
+body {
+    color: $dark;
+}
+
+a,
+a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+button,
+button:active,
+button:hover {
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    color: #fff;
+}
+
+input,
+input:active,
+input:hover,
+input:focus {
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
